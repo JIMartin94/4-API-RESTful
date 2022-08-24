@@ -1,33 +1,6 @@
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
-.form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.form form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 30%;
-}
-
-.form form div{
-  width: 50%;
-  margin-bottom: 10px;
-}
-
-.button{
-  width: 48%;
 }
 
 input[type=number]::-webkit-inner-spin-button { 

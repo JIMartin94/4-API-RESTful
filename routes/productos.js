@@ -5,36 +5,43 @@ var router = express.Router();
 const productos = new Contenedor('./productos.txt');
 
 /* GET users listing. */
-router.get('/', function(req, res) {
+
+
+router.get('/agregarProductos', (req,res) =>{
+  res.render('agregarProductos',{ title: 'Agregar de Productos' });
+});
+
+router.get('/',(req, res)=> {
   let objs = productos.getAll();
   objs.then( data =>{
-    res.send(data);
+    res.render('index',{prod: data});
   }).catch(error =>{
     res.send(error);
   })
 });
 
-router.get('/:id',(req,res) =>{
+router.get('/detalle/:id',(req,res) =>{
   let obj = productos.getById(req.params.id);
+  console.log(typeof(obj))
   obj.then( data =>{
-    res.send(data);
+    res.render('detalle',{prod: data})
   }).catch(error =>{
-    res.send("producto no encontrados");
+    res.send("producto no encontrados"+ error);
   })
 });
 
-router.post('/',({body},res)=>{
-  let prod = { "title": body.title, "price": body.price, "thumbnail":body.thumbnail }
+router.post('/agregarProductos',({body},res)=>{
+  let prod = { "title": body.title, "price": body.price, "thumbnail":body.thumbnail };
   let obj = productos.save(prod);
   obj.then( data =>{
-    res.send(data);
+    res.redirect('/productos');
   }).catch(error =>{
     res.send(error);
   })
 });
 
 router.put('/:id',({params,body},res)=>{
-  let prod = { "title": body.title, "price": body.price, "thumbnail":body.thumbnail }
+  let prod = { "title": body.title, "price": body.price, "thumbnail":body.thumbnail };
   let obj = productos.updateById(params.id,prod);
   obj.then( data =>{
     res.send(data);
