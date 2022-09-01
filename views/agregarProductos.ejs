@@ -10,29 +10,8 @@
 </head>
 <body>
     
-    <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <h2><%= title %></h2>  
-            <form action="/productos/agregarProductos" method="post">
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" name="title" >
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Precio</label>
-                <input type="number" class="form-control"  step="0.01" id="exampleFormControlInput1" name="price">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">URL de la imagen</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" name="thumbnail" >
-              </div>
-              <input type="submit" class="btn btn-primary" value="Agregar Producto">
-            </form> 
-            <%- include('./partials/nav.ejs') %> 
-          </div>
-        </div>
-      </div>
+    
+ 
 </body>
 </html>
 

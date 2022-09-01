@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "autor": "Juani",
+    "texto": "Hola que tal?",
+    "date": "1/9/2022, 11:09:47"
+  },
+  {
+    "id": 2,
+    "autor": "Pedro",
+    "texto": "Bien y vos?",
+    "date": "1/9/2022, 11:09:47"
+  },
+  {
+    "id": 3,
+    "autor": "Mariano",
+    "texto": "Genial",
+    "date": "1/9/2022, 11:09:47"
+  },
+  {
+    "id": 4,
+    "autor": "Juani",
+    "texto": "hola",
+    "date": "1/9/2022, 15:16:23"
+  },
+  {
+    "id": 5,
+    "autor": "Pedro",
+    "texto": "Hola chicos",
+    "date": "1/9/2022, 16:00:35"
+  },
+  {
+    "id": 6,
+    "autor": "Tomas",
+    "texto": "Que hacen",
+    "date": "1/9/2022, 16:00:52"
+  }
+]

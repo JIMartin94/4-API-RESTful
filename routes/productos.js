@@ -22,7 +22,6 @@ router.get('/',(req, res)=> {
 
 router.get('/detalle/:id',(req,res) =>{
   let obj = productos.getById(req.params.id);
-  console.log(typeof(obj))
   obj.then( data =>{
     res.render('detalle',{prod: data})
   }).catch(error =>{
